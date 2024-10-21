@@ -1,0 +1,6 @@
+subscription_id     = "56547eac-ec4c-45fb-a21d-e1b0362b3cbb"
+client_id           = "9e14bb22-2061-4d5a-b34e-9846811a7538"
+client_secret       = "e6v8Q~W5n3bdqodf2O1c9K3J7caj.qwFqyy.db4d"
+tenant_id           = "efdcb83a-0641-4cd5-ba9a-f16252e85ec6"
+resource_group_name = "test_resource_group"
+location            = "West Europe"
