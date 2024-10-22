@@ -38,6 +38,18 @@ resource "azurerm_network_security_group" "linux_nsg" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+  
+  security_rule {
+    name                       = "allow-jenkins"
+    priority                   = 400
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "8080"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 }
 
 resource "azurerm_network_interface_security_group_association" "linux_nic_pip_association" {
