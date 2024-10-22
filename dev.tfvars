@@ -20,7 +20,7 @@ subnets = [
   { name = "subnet2", subnet_range = ["10.0.2.0/24"], vnet = "vnet1" }
 ]
 
-/* windows_vms = [
+windows_vms = [
   {
     name           = "1dev-windows"
     admin_user     = "azureuser"
@@ -29,9 +29,7 @@ subnets = [
     admin_password = "P@$$w0rd1234!"
     subnet         = "subnet2"
   }
-] */
-
-windows_vms = []
+]
 
 linux_vms = [
   {
