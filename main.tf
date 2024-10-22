@@ -65,7 +65,3 @@ module "aks" {
   location            = var.location
   node_pools          = var.node_pools
 }
-
-
-
-
