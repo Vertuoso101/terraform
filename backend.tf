@@ -23,8 +23,8 @@ terraform {
     storage_account_name = "testzaaid"                             
     container_name       = "zaid"                              
     key                  = "terraform.tfstate"             
-    client_secret        = "${ARM_CLIENT_SECRET}"
-    subscription_id      = "${ARM_SUBSCRIPTION_ID}"
-    tenant_id            = "${ARM_TENANT_ID}"
+    client_secret        = ""
+    subscription_id      = ""
+    tenant_id            = ""
   }
 }
