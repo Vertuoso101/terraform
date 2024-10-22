@@ -19,10 +19,8 @@ subnets = [
 windows_vms = [
   {
     name           = "1dev-windows"
-    admin_user     = "azureuser"
     size           = "Standard_DS1_v2"
     environment    = "dev"
-    admin_password = "P@$$w0rd1234!"
     subnet         = "subnet2"
   }
 ]

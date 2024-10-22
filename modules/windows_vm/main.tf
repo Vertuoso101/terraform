@@ -1,3 +1,18 @@
+data "azurerm_key_vault" "keyvault" {
+  name                = "zaidSecs"
+  resource_group_name = "test"
+}
+
+data "azurerm_key_vault_secret" "adminUser" {
+  name         = "adminUser"
+  key_vault_id = data.azurerm_key_vault.keyvault.id
+}
+
+data "azurerm_key_vault_secret" "adminPassword" {
+  name         = "adminPassword"
+  key_vault_id = data.azurerm_key_vault.keyvault.id
+}
+
 resource "azurerm_network_interface" "windows_nic" {
   for_each = {for vm in var.windows_vms : vm.name => vm}
   name                = "${each.value.name}-nic"
@@ -66,8 +81,8 @@ resource "azurerm_windows_virtual_machine" "vm_windows" {
   resource_group_name   = var.resource_group_name
   location              = var.location
   size                  = each.value.size
-  admin_username        = each.value.admin_user
-  admin_password        = each.value.admin_password
+  admin_username        = data.azurerm_key_vault_secret.adminUser.value
+  admin_password        = data.azurerm_key_vault_secret.adminPassword.value
   network_interface_ids = [azurerm_network_interface.windows_nic[each.key].id]
 
   os_disk {
