@@ -3,10 +3,10 @@ provider "azurerm" {
 
   features {}
 
-  subscription_id = data.azurerm_key_vault_secret.subscriptionid.value
-  client_id       = data.azurerm_key_vault_secret.clientid.value
-  client_secret   = data.azurerm_key_vault_secret.clientsecret.value
-  tenant_id       = data.azurerm_key_vault_secret.tenantid.value
+  subscription_id = var.subscription_id
+  client_id       = var.client_id
+  client_secret   = var.client_secret
+  tenant_id       = var.tenant_id
 
 }
 
