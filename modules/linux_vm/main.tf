@@ -18,7 +18,7 @@ resource "azurerm_public_ip" "linux_pip" {
   name                = "${each.key}-public-ip"
   location            = var.location
   resource_group_name = var.resource_group_name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
 }
 
 resource "azurerm_network_security_group" "linux_nsg" {
