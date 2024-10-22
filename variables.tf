@@ -51,8 +51,6 @@ variable "windows_vms" {
   type = list(object({
     name           = string
     size           = string
-    admin_user     = string
-    admin_password = string
     subnet         = string
     environment    = string
   }))
