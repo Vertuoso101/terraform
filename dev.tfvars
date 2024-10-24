@@ -34,6 +34,13 @@ linux_vms = [
     size        = "Standard_DS1_v2"
     subnet      = "subnet1"
     environment = "dev"
+  },
+  {
+    name        = "2dev-linux"
+    admin_user  = "azureuser"
+    size        = "Standard_DS1_v2"
+    subnet      = "subnet1"
+    environment = "dev"
   }
 ]
 
